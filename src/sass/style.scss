@@ -1,0 +1,43 @@
+//Библиотеки
+@import "libs/normalize";
+@import "libs/fullpage.min";
+@import "libs/swiper-bundle.min";
+
+//Шрифты, переменные
+@import "variable/variable";
+@import "fonts";
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1720px;
+}
+
+.title{
+    font-family: 'Neue Machina';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 96px;
+    border: 1px solid $black;
+}
+
+//Блоки
+@import "blocks/header";
+@import "blocks/menu-burger";
+@import "blocks/services";
+@import "blocks/benefits";
+@import "blocks/reviews";
+@import "blocks/about";
+@import "blocks/partners";
+@import "blocks/cerficates";
+@import "blocks/team";
+@import "blocks/footer";
+//Адаптив
+@import "media/media";
