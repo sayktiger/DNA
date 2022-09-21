@@ -6,6 +6,39 @@ const autoprefixer= require('gulp-autoprefixer');
 const cleanCSS    = require('gulp-clean-css');
 const imagemin    = require('gulp-imagemin');
 const htmlmin     = require('gulp-htmlmin');
+const svgSprite = require('gulp-svg-sprite');
+const svgspriteConfig = {
+    shape: {
+        dimension: {
+            maxWidth: 500,
+            maxHeight: 500
+        },
+        spacing: {
+            padding: 0
+        },
+        transform: [{
+            "svgo": {
+                "plugins": [
+                    { removeViewBox: false },
+                            { removeUnusedNS: false },
+                            { removeUselessStrokeAndFill: true },
+                            { cleanupIDs: true },
+                            { removeComments: true },
+                            { removeEmptyAttrs: true },
+                            { removeEmptyText: true },
+                            { collapseGroups: true },
+                            { removeAttrs: { attrs: '(fill|stroke|style|id)' } }
+                ]
+            }
+        }]
+    },
+    mode: {
+        symbol: {
+            dest : '.',
+            sprite: 'sprite.svg'
+        }
+    }
+  };
 
 
 // Static server
@@ -35,44 +68,6 @@ gulp.task('styles',function(){
             .pipe(browserSync.stream());
 });
 
-// gulp.task(`svgsprite`, function (){
-//     let config = {
-//         shape: {
-//             dimension: {
-//                 maxWidth: 500,
-//                 maxHeight: 500
-//             },
-//             spacing: {
-//                 padding: 0
-//             },
-//             transform: [{
-//                 "svgo": {
-//                     "plugins": [
-//                         { removeViewBox: false },
-//                                 { removeUnusedNS: false },
-//                                 { removeUselessStrokeAndFill: true },
-//                                 { cleanupIDs: false },
-//                                 { removeComments: true },
-//                                 { removeEmptyAttrs: true },
-//                                 { removeEmptyText: true },
-//                                 { collapseGroups: true },
-//                                 { removeAttrs: { attrs: '(fill|stroke|style)' } }
-//                     ]
-//                 }
-//             }]
-//         },
-//         mode: {
-//             symbol: {
-//                 dest : '.',
-//                 sprite: 'sprite.svg'
-//             }
-//         }
-//     };
-//     gulp.task()
-//     return gulp.src("src/img/svgIcons/*.svg")      
-//         .pipe(svgSprite(config)).on('error', function(error){ console.log(error); })
-//         .pipe(gulp.dest("dist/img/svg "));
-// });
     
 
 gulp.task('watch', function(){
@@ -118,5 +113,13 @@ gulp.task(`images`,function(){
         .pipe(browserSync.stream());
 });
 
+gulp.task(`svgSprite`, function(){
+    return gulp.src("src/img/svg/*.svg")      
+        .pipe(svgSprite(svgspriteConfig)).on('error', function(error){ console.log(error); })
+        .pipe(gulp.dest("dist/img"));
+});
 
-gulp.task('default', gulp.parallel('watch','server','styles',`scripts`,`fonts`,`icons`,`html`,`mailer`,`images`));
+
+
+
+gulp.task('default', gulp.parallel('watch','server','styles',`scripts`,`fonts`,`icons`,`html`,`mailer`,`images`,`svgSprite`));
