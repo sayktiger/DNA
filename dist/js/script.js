@@ -82,11 +82,18 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
     new fullpage('#fullpage', {
         //options here
-        autoScrolling:true,
         scrollHorizontally: true,
+        scrollOverflow: false,
         fixedElements: '.header',
         menu: '#header',
-            css3: true,
-            scrollingSpeed: 1000
+        css3: true,
+        scrollingSpeed: 1000,
+    });
+
+    const arrowDown = document.querySelectorAll(`#down`);
+    arrowDown.forEach((arrow) =>{
+        arrow.addEventListener(`click`, (e)=>{
+            fullpage_api.moveSectionDown();
+        });
     });
 });

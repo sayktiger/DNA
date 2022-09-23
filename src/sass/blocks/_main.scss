@@ -1,0 +1,40 @@
+.main{
+    background: url('../img/main/main-background.png') center center /cover no-repeat;
+    display: block;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+    &__title{
+        font-family: 'Neue Machina';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 96px;
+        color: $white;
+        max-width: 1162px;
+        margin-bottom: 20px;
+        span{
+            color: $black;
+        }
+    }
+    
+    &__arrow{
+        max-width: 66px;
+        max-height: 80px;
+        cursor: pointer;
+        &:hover{
+            svg{
+                fill:#960018;
+            }
+        }
+        svg{
+            max-width: 66px;
+            max-height: 80px;
+            fill: $white;
+            transition: all 0.3s;
+        }
+    }
+}

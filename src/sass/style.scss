@@ -16,6 +16,10 @@
 body{
     position: relative;
 }
+h1,h2,h3,p{
+    margin: 0;
+}
+
 .overflow{
     overflow: hidden;
 }
@@ -40,6 +44,7 @@ img {
 //Блоки
 @import "blocks/header";
 @import "blocks/menu-burger";
+@import "blocks/main";
 @import "blocks/services";
 @import "blocks/benefits";
 @import "blocks/reviews";
