@@ -1,11 +1,51 @@
 document.addEventListener(`DOMContentLoaded`, () => {
+    //Меню
+    const burger = document.querySelector(`.header__burger`),
+        menu = document.querySelector(`.menu`),
+        close = document.querySelector(`.menu__close`),
+        menuLink = document.querySelectorAll(`.menu__item a`),
+        body = document.querySelector(`body`);
+    
+    burger.addEventListener(`click`, (e) =>{
+        menu.classList.add(`menu__active`);
+        body.classList.add(`overflow`);
+    });
+
+    close.addEventListener(`click`, (e) =>{
+        menu.classList.remove(`menu__active`);
+        body.classList.remove(`overflow`);
+    });
+
+    menuLink.forEach( link =>{
+        link.addEventListener(`click`, (e) =>{
+            menu.classList.remove(`menu__active`);
+            body.classList.remove(`overflow`);
+        });
+    });
+
+   // Активный класс на ссылку при скролле
+    window.addEventListener('scroll', () => {
+        let scrollDistance = window.scrollY;
+        if (window.innerWidth > 768) {
+            document.querySelectorAll('.section_menu').forEach((el, i) => {
+                if (el.offsetTop - document.querySelector('.menu__block').clientHeight <= scrollDistance) {
+                    document.querySelectorAll('.menu__block a').forEach((el) => {
+                        if (el.classList.contains('menu__item_link_active')) {
+                            el.classList.remove('menu__item_link_active');
+                        }
+                    });
+
+                    document.querySelectorAll('.menu__block li')[i].querySelector('a').classList.add('menu__item_link_active');
+                }
+            });
+        }
+    });
+        
+    
 
 
 
-
-
-
-//Скрипт для плавного скролла по якорям
+    //Скрипт для плавного скролла по якорям
     // собираем все якоря; устанавливаем время анимации и количество кадров
     const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
         animationTime = 600,
@@ -38,5 +78,15 @@ document.addEventListener(`DOMContentLoaded`, () => {
                 // время интервала равняется частному от времени анимации и к-ва кадров
             }, animationTime / framesCount);
         });
+    });
+
+    new fullpage('#fullpage', {
+        //options here
+        autoScrolling:true,
+        scrollHorizontally: true,
+        fixedElements: '.header',
+        menu: '#header',
+            css3: true,
+            scrollingSpeed: 1000
     });
 });

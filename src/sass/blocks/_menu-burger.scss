@@ -1,0 +1,119 @@
+.menu{
+    position: fixed;
+    top:-100%;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: $bg;
+    height: 100vh;
+    transition: all 0.6s;
+    z-index: -10;
+    &__active{
+        top:0;
+        z-index: 10;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+    }
+    &__logo{
+        max-width: 190px;
+    }
+    &__contact{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 440px;
+    }
+    &__email, &__tel{
+        a{
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: $white;
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+    &__close{
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        transition: all 0.3s;
+        span{
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: $white;
+            &:nth-child(1){
+                transform: translate(0px,12px) rotate(45deg);
+            }
+            &:nth-child(2){
+                transform: translate(0px,10px) rotate(-45deg);
+            }
+        }
+        &:hover{
+            span{
+                opacity: 0.6;
+            }
+        }
+    }
+    &__block{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__list{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item{
+        list-style: none;
+        position: relative;
+        &_link{
+            font-family: 'Neue Machina';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 29px;
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: 0.3s all;
+            &:hover{
+                opacity: 0.6;
+            }
+            &_active{
+                color: transparent; /* прозрачный цвет букв */
+                -webkit-text-stroke: 0.5px $white;
+            }
+        }
+      
+        &:not(:last-child){
+            &::before{
+                content: '/';
+                position: absolute;
+                right: (-26px - 18px);
+                top: 0;
+                width: 18px;
+                height: 29px;
+                font-family: 'Neue Machina';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 30px;
+                line-height: 29px;
+                color: #FFFFFF;
+            }
+        }
+        
+    }
+}
