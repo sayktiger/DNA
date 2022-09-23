@@ -93,10 +93,7 @@
             &:hover{
                 opacity: 0.6;
             }
-            &_active{
-                color: transparent; /* прозрачный цвет букв */
-                -webkit-text-stroke: 1px $white;
-            }
+            
         }
       
         &:not(:last-child){
@@ -114,6 +111,13 @@
                 line-height: 29px;
                 color: #FFFFFF;
             }
+        }
+        
+    }
+    .active{
+        a{
+            color: transparent; /* прозрачный цвет букв */
+            -webkit-text-stroke: 1px $white;
         }
         
     }

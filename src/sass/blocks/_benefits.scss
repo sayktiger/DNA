@@ -1,7 +1,7 @@
 .benefits{
     background-color: #111111;
     display: block;
-    padding-top: 70px;
+    padding-top: 140px;
     &__block{
         display: flex;
         flex-direction: row;
@@ -12,10 +12,14 @@
     }
     &__left{
         max-width: 790px;
+        position: relative;
     }
     &__rigth{
         max-width: 606px;
         align-self: center;
+    }
+    &__wrapper{
+        overflow: hidden;
     }
     &__title{
         font-family: 'Neue Machina';
@@ -47,12 +51,29 @@
         font-size: 20px;
         line-height: 24px;
         color: $grey;
-        margin-bottom: 70px;
     }
+    
+    &__item{
+        font-family: 'Neue Machina';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 80px;
+        line-height: 77px;
+        color: #191919;
+        opacity: 0.6;
+        &:not(:last-child){
+            margin-bottom: 50px;
+        }
+    }
+    
     &__arrow{
         max-width: 36px;
         max-height: 43px;
+        position: absolute;
+        bottom: -106px;
+        left:0;
         cursor: pointer;
+        z-index: 5;
         &:hover{
             svg{
                 fill:#960018;
@@ -65,16 +86,8 @@
             transition: all 0.3s;
         }
     }
-    &__item{
-        font-family: 'Neue Machina';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 80px;
-        line-height: 77px;
-        color: #191919;
-        opacity: 0.6;
-        &:not(:last-child){
-            margin-bottom: 50px;
-        }
+    .swiper-slide{
+        max-height: 238px;
+        
     }
 }
