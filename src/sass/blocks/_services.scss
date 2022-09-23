@@ -1,0 +1,74 @@
+.services{
+    background-color: $white;
+    display: block;
+    &__block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+    &__title{
+        margin-bottom: 80px;
+        font-family: 'Neue Machina';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 96px;
+        color:transparent;
+        -webkit-text-stroke: 1px $black;
+        span{
+            color: $black;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__card{
+        max-width:443px;
+        &_title{
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 36px;
+            color: $black;
+        }
+        &_subtitle{
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: $grey;
+            margin-bottom: 60px;
+            position: relative;
+            &::before{
+                content: url("../img/svg/arrow-black.svg");
+                width: 36px;
+                height: 44px;
+                position: absolute;
+                bottom: 50%;
+                right: 0;
+            }
+        }
+
+        &_item{
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: $black;
+            list-style: none;
+            &:not(:last-child){
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+
+}

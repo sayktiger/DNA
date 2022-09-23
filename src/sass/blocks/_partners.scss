@@ -1,0 +1,32 @@
+.partners{
+    background-color: $white;
+    display: block;
+    padding-top: 70px;
+    padding-bottom: 115px;
+    &__block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title{
+        font-family: 'Neue Machina';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 96px;
+        color: transparent;
+        -webkit-text-stroke: 1px $black;
+        margin-bottom: 80px;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+    &__bot{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

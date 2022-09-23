@@ -1,0 +1,104 @@
+.team{
+    display: block;
+    background-color: #111111;
+    &__block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+   
+    &__title{
+        font-family: 'Neue Machina';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 96px;
+        color: transparent;
+        -webkit-text-stroke: 1px $white;
+        margin-bottom: 80px;
+        span{
+            color: $white;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        max-width: 1206px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__text{
+        max-width: 681px;
+        &_title{
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 34px;
+            line-height: 40px;
+            color: $white;
+            margin-bottom: 5px;
+        }
+        &_subtitle{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: $white;
+            opacity: 0.6;
+            margin-bottom: 40px;
+        }
+        &_descr{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: $white;
+        }
+    }
+    &__img{
+        max-width: 455px;
+        max-height: 613px;
+    }
+    &__arrow{
+        display: block;
+        position: absolute;
+        top: auto;
+        left: 25%;
+        bottom: 40px;
+        right: auto;
+        width: 66px;
+        height: 80px;
+        cursor: pointer;
+        transform: rotate(-90deg);
+        z-index: 5;
+        &:hover{
+            svg{
+                fill:#960018;
+            }
+        }
+        svg{
+            width: 66px;
+            height: 80px;
+            fill: $white;
+            transition: all 0.3s;
+        }
+    }
+    &__text-before{
+        font-family: 'Neue Machina';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 96px;
+        opacity: 0.1;
+        -webkit-text-stroke: 1px $white;
+        position: absolute;
+        color: transparent;
+        bottom: 15%;
+        left: 15%;
+        max-width: 1544px;
+    }
+}

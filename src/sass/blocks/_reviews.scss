@@ -1,0 +1,85 @@
+.reviews{
+    background-color: #191919;
+    display: block;
+    &__block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        position: relative;
+    }
+    &__title{
+        font-family: 'Neue Machina';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 96px;
+        color:transparent;
+        -webkit-text-stroke: 1px $white;
+        margin-bottom: 80px;
+        span{
+            color: $white;
+        }
+    }
+    &__swiper{
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .swiper-wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    &__descr{
+        max-width: 700px;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        color: $white;
+        margin-bottom: 70px;
+    }
+    &__company{
+        display: flex;
+        align-items: flex-start;
+        &_img{
+            width: 100px;
+            height: 100px;
+        }
+        &_name{
+            margin-left: 30px;
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            color: $white;
+        }
+    }
+    &__arrow{
+        display: block;
+        position: absolute;
+        top: auto;
+        left: auto;
+        bottom: 60px;
+        right: 0;
+        width: 66px;
+        height: 80px;
+        cursor: pointer;
+        transform: rotate(-90deg);
+        z-index: 5;
+        &:hover{
+            svg{
+                fill:#960018;
+            }
+        }
+        svg{
+            width: 66px;
+            height: 80px;
+            fill: $white;
+            transition: all 0.3s;
+        }
+    }
+}

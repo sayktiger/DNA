@@ -1,0 +1,60 @@
+.about{
+    background: url('../img/about/about-background.png') left /65% no-repeat;
+    display: block;
+    padding-top: 70px;
+    &_two{
+        background: url('../img/about/about-bg2.png') left /65% no-repeat;
+    }
+    &_three{
+        background: url('../img/about/about-bg3.png') left /65% no-repeat;
+    }
+    &__block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        position: relative;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title{
+        font-family: 'Neue Machina';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 96px;
+        color: $black;
+        max-width: 810px;
+    }
+    &__descr{
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        color: $black;
+        max-width: 517px;
+    }
+    &__arrow{
+        position: absolute;
+        bottom: 126px;
+        right: 0;
+        width: 66px;
+        height: 88px;
+        cursor: pointer;
+        &:hover{
+            svg{
+                fill:#960018;
+            }
+        }
+        svg{
+            width: 66px;
+            height: 88px;
+            fill: $black;
+            transition: all 0.3s;
+        }
+    }
+}

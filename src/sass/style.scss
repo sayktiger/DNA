@@ -16,8 +16,9 @@
 body{
     position: relative;
 }
-h1,h2,h3,p{
+h1,h2,h3,p,ul,li{
     margin: 0;
+    padding: 0;
 }
 
 .overflow{
@@ -39,7 +40,9 @@ img {
     line-height: 96px;
     border: 1px solid $black;
 }
-
+.fp-watermark{
+    display: none;
+}
 
 //Блоки
 @import "blocks/header";

@@ -90,10 +90,45 @@ document.addEventListener(`DOMContentLoaded`, () => {
         scrollingSpeed: 1000,
     });
 
-    const arrowDown = document.querySelectorAll(`#down`);
+    const arrowDown = document.querySelectorAll(`.down`);
     arrowDown.forEach((arrow) =>{
         arrow.addEventListener(`click`, (e)=>{
             fullpage_api.moveSectionDown();
         });
     });
+
+    const swiper = new Swiper('.reviews__swiper', {
+        speed: 400,
+        spaceBetween: 160,
+        slidesPerView: 2,
+        navigation: {
+            nextEl: '.reviews__arrow',
+            
+        },
+        direction: 'horizontal',
+        loop: true,
+        
+      });
+
+      const swiperTwo = new Swiper('.certificates__swiper', {
+        speed: 400,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.certificates__arrow',  
+        },
+        direction: 'horizontal',
+        loop: true,
+        
+      });
+
+      const swiperThree = new Swiper('.team__swiper', {
+        speed: 400,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.team__arrow',  
+        },
+        direction: 'horizontal',
+        loop: true,
+        
+      });
 });
