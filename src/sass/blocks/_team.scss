@@ -1,6 +1,9 @@
 .team{
     display: block;
     background-color: #111111;
+    &__img-mobile{
+        display: none;
+    }
     &__block{
         display: flex;
         flex-direction: column;

@@ -1,6 +1,9 @@
 .services{
     background-color: $white;
     display: block;
+    &__block-mobile{
+        display: none;
+    }
     &__block{
         display: flex;
         flex-direction: column;
