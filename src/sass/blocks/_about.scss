@@ -1,12 +1,5 @@
 .about{
     display: block;
-    padding-top: 70px;
-    &_two{
-        background: url('../img/about/about-bg2.png') left /65% no-repeat;
-    }
-    &_three{
-        background: url('../img/about/about-bg3.png') left /65% no-repeat;
-    }
     &__block{
         display: flex;
         flex-direction: column;
@@ -66,7 +59,7 @@
         max-width: 100vw;
     }
     .swiper-slide{
-        height: 100%;
+        height: 100vh;
     }
     &_one{
         background: url('../img/about/about-background.png') left /65% no-repeat;

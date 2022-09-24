@@ -70,6 +70,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
             nextEl: '.reviews__arrow',
             
         },
+        allowTouchMove: false,
         direction: 'horizontal',
         loop: true,
         
@@ -81,6 +82,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
         navigation: {
             nextEl: '.certificates__arrow',  
         },
+        allowTouchMove: false,
         direction: 'horizontal',
         loop: true,
         
@@ -92,6 +94,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
         navigation: {
             nextEl: '.team__arrow',  
         },
+        allowTouchMove: false,
         direction: 'horizontal',
         loop: true,
         
@@ -119,6 +122,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
         navigation: {
             nextEl: '.about__arrow',  
         },
+        spaceBetween: 0,
         direction: 'vertical',
         autoHeight: `100%`,
         loop: true,
