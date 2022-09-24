@@ -1,4 +1,4 @@
-@media (max-width:1400px) {
+@media (max-width:1440px) {
     .container{
         max-width: 1260px;
     }
@@ -12,6 +12,7 @@
         }
         &__email, &__tel{
             font-size: 18px;
+            line-height: 77px;
         }
     }
 
@@ -209,8 +210,13 @@
             max-width: 420px;
             max-height: 566px;
         }
+        &__swiper{
+            max-width: 1250px;
+            overflow: hidden;
+        }
         &__wrapper{
             max-width: 1080px;
+            overflow: hidden;
         }
         &__text{
             max-width: 600px;
