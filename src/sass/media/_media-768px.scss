@@ -102,7 +102,7 @@
        
         &__left{
             max-width: 603px;
-            margin-bottom: 54px;
+            margin-bottom: 0;
         }
         .swiper-slide{
             min-height: 188px;
@@ -112,14 +112,14 @@
             align-self: flex-start;
         }
         &__item{
-            font-size: 80px;
+            font-size: 70px;
             line-height: 77px;
             &:not(:last-child){
                 margin-bottom: 20px;
             }
         }
         &__arrow{
-            bottom: -5px;
+            bottom: -10%;
             max-width: 25px;
             max-height: 30px;
             svg{

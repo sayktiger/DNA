@@ -43,8 +43,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
         
 
     new fullpage('#fullpage', {
-        //options here
-        scrollHorizontally: true,
+        scrollHorizontally: false,
         scrollOverflow: false,
         fixedElements: '.header',
         menu: '#menu',

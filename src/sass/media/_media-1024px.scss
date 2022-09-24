@@ -311,11 +311,12 @@
             font-size: 55px;
             line-height: 53px;
             left: 9%;
+            bottom: 20%;
         }
         &__arrow{
             max-width: 45px;
             max-height: 55px;
-            bottom: 25px;
+            bottom: 8%;
             left:27%;
             svg{
                 max-width: 45px;
@@ -343,8 +344,10 @@
             }
         }
         &__tel, &__email{
-            font-size: 16px;
-            line-height: 19px;
+            a{
+                font-size: 16px;
+                line-height: 19px;
+            }
         }
         &__tel{
             margin-bottom: 5px;
