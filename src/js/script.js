@@ -4,7 +4,8 @@ document.addEventListener(`DOMContentLoaded`, () => {
         menu = document.querySelector(`.menu`),
         close = document.querySelector(`.menu__close`),
         menuLink = document.querySelectorAll(`.menu__item a`),
-        body = document.querySelector(`body`);
+        body = document.querySelector(`body`),
+        html = document.querySelector(`html`)
     
     burger.addEventListener(`click`, (e) =>{
         menu.classList.add(`menu__active`);
@@ -22,25 +23,22 @@ document.addEventListener(`DOMContentLoaded`, () => {
             body.classList.remove(`overflow`);
         });
     });
-
-   // Активный класс на ссылку при скролле
-    // window.addEventListener('scroll', () => {
-    //     let scrollDistance = window.scrollY;
-    //     if (window.innerWidth > 768) {
-    //         document.querySelectorAll('.section_menu').forEach((el, i) => {
-    //             if (el.offsetTop - document.querySelector('.menu__block').clientHeight <= scrollDistance) {
-    //                 document.querySelectorAll('.menu__block a').forEach((el) => {
-    //                     if (el.classList.contains('menu__item_link_active')) {
-    //                         el.classList.remove('menu__item_link_active');
-    //                     }
-    //                 });
-
-    //                 document.querySelectorAll('.menu__block li')[i].querySelector('a').classList.add('menu__item_link_active');
-    //             }
-    //         });
-    //     }
-    // });
-        
+    const swiperScroll = document.querySelector(`.swiper-scroll`);
+    const swiperFour = new Swiper('.benefit__swiper', {
+        speed: 600,
+        slidesPerView: 1,
+        direction: 'vertical',
+        autoHeight: true,
+        loop: false,
+        allowTouchMove: true,
+        mousewheelControl: true,
+        spaceBetween: 30,
+        mousewheel: {
+            enabled: true,
+            eventsTarged: `.benefits__rigth, .benefits__left`,
+            sensitivity: 1,
+          },
+      });
 
     new fullpage('#fullpage', {
         scrollHorizontally: false,
@@ -51,13 +49,35 @@ document.addEventListener(`DOMContentLoaded`, () => {
 	    fitToSectionDelay: 600,
         css3: true,
         scrollingSpeed: 1000,
-        anchors:[`main`,'services', 'benefits', `reviews`,`about`,`partners`,`certificates`,`team`],
+        anchors:[`main`,'services', 'benefits', `reviews`,`about`,`aboutTwo`,`aboutThree`,`partners`,`certificates`,`team`],
+        onLeave : function(origin, destination, direction, trigger){
+            var origin = this;
+            if(swiperFour.activeIndex < 2 && origin.anchor == 'services'){
+                fullpage_api.setAllowScrolling(false);
+                down(swiperFour);
+            }
+        },
     });
+
+
+    const down = function(swiperMy){
+        window.addEventListener(`wheel` , (e) =>{
+            if(swiperMy.activeIndex == 2 && swiperMy.progress == 1){
+                swiperMy.allowSlidePrev = false;
+                swiperMy.allowSlideNext = false;
+                fullpage_api.setAllowScrolling(true);
+            }
+        });
+        
+    }
+
+
 
     const arrowDown = document.querySelectorAll(`.down`);
     arrowDown.forEach((arrow) =>{
         arrow.addEventListener(`click`, (e)=>{
             fullpage_api.moveSectionDown();
+            fullpage_api.setAllowScrolling(true);
         });
     });
 
@@ -99,38 +119,8 @@ document.addEventListener(`DOMContentLoaded`, () => {
         
       });
 
-      const swiperFour = new Swiper('.benefit__swiper', {
-        speed: 1000,
-        slidesPerView: 1,
-        navigation: {
-            nextEl: '.benefits__arrow',  
-        },
-        direction: 'vertical',
-        autoHeight: true,
-        loop: true,
-        allowTouchMove: false,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: true
-          },
-      });
 
-      const swiperFive = new Swiper('.about__swiper', {
-        speed: 1000,
-        slidesPerView: 1,
-        navigation: {
-            nextEl: '.about__arrow',  
-        },
-        spaceBetween: 0,
-        direction: 'vertical',
-        autoHeight: `100%`,
-        loop: true,
-        allowTouchMove: false,
-        autoplay: {
-            delay: 8000,
-            disableOnInteraction: true
-          },
-      });
+      
 
       //Аккардион на мобилке
       const accordions = document.querySelectorAll(".accordion");
@@ -162,5 +152,5 @@ document.addEventListener(`DOMContentLoaded`, () => {
                 }
             };
         });
-
+    
 });

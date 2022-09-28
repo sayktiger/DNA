@@ -1,6 +1,7 @@
 @media (max-width: 480px) {
     .container{
-        max-width: 440px;
+        max-width: 100%;
+        padding: 0 15px;
     }
     .header{
         &__wrapper{
@@ -119,7 +120,7 @@
     }
 
     .benefits {
-        padding-top:0;
+        padding-top:70px;
         &__block{
             align-items: flex-start;
             flex-direction: column;
@@ -128,7 +129,7 @@
         &__title{
             font-size: 45px;
             line-height: 43px;
-            margin-bottom: 50px;
+            margin-bottom: 25px;
         }
         &__subtitle{
             font-size: 35px;
@@ -137,13 +138,13 @@
         }
         &__descr{
             max-width: 440px;
-            font-size: 18px;
-            line-height: 19px;
+            font-size: 14px;
+            line-height: 14px;
         }
        
         &__left{
             max-width: 603px;
-            margin-bottom: 54px;
+            margin-bottom: 0;
         }
         .swiper-slide{
             min-height: 188px;
@@ -153,14 +154,14 @@
             align-self: flex-start;
         }
         &__item{
-            font-size: 55px;
-            line-height: 53px;
+            font-size: 30px;
+            line-height: 34px;
             &:not(:last-child){
-                margin-bottom: 30px;
+                margin-bottom: 20px;
             }
         }
         &__arrow{
-            bottom: -80px;
+            bottom: 0px;
             max-width: 25px;
             max-height: 30px;
             svg{
@@ -171,8 +172,9 @@
     }
 
     .about{
-        padding-top: 0;
+        
         &__wrapper{
+            padding: 0 15px;
             max-width: 440px;
             flex-direction: column;
             justify-content: center;
@@ -183,7 +185,7 @@
             line-height: 43px;;
             max-width: 540px;
             min-height: 149px;
-            margin-bottom: 265px;
+            margin-bottom: 200px;
         }
         &__descr{
             max-width: 405px;
@@ -208,23 +210,23 @@
         }
 
         &_one{
-            background: url('../img/about/about-background.png') top center /100% 61% no-repeat;
+            background: url('../img/about/about-background.webp') top center /100% 61% no-repeat;
         }
         &_two{
-            background: url('../img/about/about-bg2.png') top center /100% 61% no-repeat;
+            background: url('../img/about/about-bg2.webp') top center /100% 61% no-repeat;
         }
         &_three{
-            background: url('../img/about/about-bg3.png') top center /100% 61% no-repeat;
+            background: url('../img/about/about-bg3.webp') top center /100% 61% no-repeat;
         }
     }
 
 
     .partners{
-        padding-bottom: 60px;
+        padding-bottom: 40px;
         &__title{
             font-size: 45px;
             line-height: 43px;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
         &__top{
             display: none;
@@ -240,7 +242,7 @@
         }
         &__img{
             &:nth-child(-n+8){
-                margin-bottom: 40px;
+                margin-bottom: 20px;
             }
         }
         .alf, .air{
@@ -270,10 +272,11 @@
     }
 
     .certificates {
+        padding-top: 20px;
         &__title{
             font-size: 45px;
-            line-height: 43px;
-            margin-bottom: 50px;
+            line-height: 20px;
+            margin-bottom: 25px;
         }
         &__wrapper{
             display: flex;
@@ -285,8 +288,8 @@
             max-width: 100%;
             &_title{
                 font-size: 24px;
-                line-height: 28px;
-                margin-bottom: 20px;
+                line-height: 14px;
+                margin-bottom: 10px;
             }
             &_subtitle{
                 margin-bottom: 5px;
@@ -297,20 +300,20 @@
                 line-height: 19px;
             }
             &:nth-child(1){
-                margin-bottom: 25px;
+                margin-bottom: 15px;
             }
         }
         &__img{
-            max-width: 210px;
+            max-width: 100px;
             max-height: 300px;
             margin: 0 auto;
-            margin-top: 49px;
+            margin-top: 25px;
         }
         &__arrow{
             max-width: 35px;
             max-height: 43px;
-            bottom: 65px;
-            right: 24%;
+            bottom: 5px;
+            right: 33%;
             svg{
                 max-width: 35px;
                 max-height: 43px;
@@ -319,6 +322,7 @@
     }
 
     .team{
+        padding-top: 20px;
         &__title{
             font-size: 45px;
             line-height: 43px;
@@ -329,7 +333,7 @@
         }
         &__img-mobile{
             display: block;
-            max-width: 440px;
+            max-width: 200px;
             max-height: 400px;
             margin-bottom: 10px;
         }
@@ -349,7 +353,7 @@
             &_subtitle{
                 font-size: 16px;
                 line-height: 19px;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
             }
             &_descr{
                 font-size: 16px;
@@ -362,9 +366,8 @@
         &__arrow{
             max-width: 35px;
             max-height: 43px;
-            bottom: 33%;
-            left:auto;
-            right: 1%;
+            bottom: 41%;
+            left:42%;
             svg{
                 max-width: 35px;
                 max-height: 43px;
@@ -430,10 +433,10 @@
             max-width: 270px;
         }
         &__list{
-            max-width: 100%;
-        }
-        &__item:nth-child(-n+5){
-            margin-bottom: 30px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 285px;
         }
         &__item{
             &_link{
@@ -441,40 +444,15 @@
                 line-height: 15px;
             }
             &:not(:last-child){
-                &::before{
-                    font-size: 16px;
-                    line-height: 15px;
-                    color: #FFFFFF;
-                    right: -33px;
-                    top: 3px;
-                }
-                
+                margin-bottom: 30px;
             }
-            &:nth-child(3){
-                &:before{
-                    display: none;
-                }
+            &::before{
+                display: none;
             }
-            &:nth-child(5){
-                &:before{
-                    display: none;
-                }
+            &:nth-child(4):before{
+                display: none;
             }
-            &:nth-child(4){
-                &:before{
-                    right: -65px;
-                }
-            }
-            &:nth-child(6){
-                &:before{
-                    right: -60px;
-                }
-            }
-            &:nth-child(4){
-                &:before{
-                    display: block;
-                }
-            }
+            
         }
         
     }

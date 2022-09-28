@@ -12,7 +12,7 @@
         justify-content: space-between;
         max-width: 1720px;
         align-items: center;
-        height: 100%;
+        height: 100vh;
         margin: 0 auto;
     }
     &__title{
@@ -55,20 +55,25 @@
     }
     .about__swiper{
         max-height: 100vh;
+        max-width: 100vw;
+    }
+    &_one{
+        background: url('../img/about/about-background.webp') left /65% no-repeat;
+        max-height: 100vh;
         overflow: hidden;
         max-width: 100vw;
     }
-    .swiper-slide{
-        height: 100vh;
-    }
-    &_one{
-        background: url('../img/about/about-background.png') left /65% no-repeat;
-    }
     &_two{
-        background: url('../img/about/about-bg2.png') left /65% no-repeat;
+        background: url('../img/about/about-bg2.webp') left /65% no-repeat;
+        max-height: 100vh;
+        overflow: hidden;
+        max-width: 100vw;
     }
     &_three{
-        background: url('../img/about/about-bg3.png') left /65% no-repeat;
+        background: url('../img/about/about-bg3.webp') left /65% no-repeat;
+        max-height: 100vh;
+        overflow: hidden;
+        max-width: 100vw;
     }
     
 }

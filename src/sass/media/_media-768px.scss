@@ -1,6 +1,7 @@
 @media (max-width:768px) {
     .container{
-        max-width: 708px;
+        max-width: 688px;
+        padding: 0 15px;
     }
 
     .header{
@@ -87,8 +88,8 @@
         }
         &__title{
             font-size: 60px;
-            line-height: 58px;
-            margin-bottom: 50px;
+            line-height: 30px;
+            margin-bottom: 40px;
         }
         &__subtitle{
             font-size: 45px;
@@ -149,7 +150,7 @@
         }
         &__descr{
             max-width: 606px;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 150%;
         }
         &__arrow{
@@ -170,13 +171,13 @@
         }
 
         &_one{
-            background: url('../img/about/about-background.png') top center /100% 70% no-repeat;
+            background: url('../img/about/about-background.webp') top center /100% 70% no-repeat;
         }
         &_two{
-            background: url('../img/about/about-bg2.png') top center /100% 70% no-repeat;
+            background: url('../img/about/about-bg2.webp') top center /100% 70% no-repeat;
         }
         &_three{
-            background: url('../img/about/about-bg3.png') top center /100% 70% no-repeat;
+            background: url('../img/about/about-bg3.webp') top center /100% 70% no-repeat;
         }
     }
 
@@ -262,13 +263,13 @@
             max-width: 295px;
             max-height: 420px;
             margin: 0 auto;
-            margin-top: 70px;
+            margin-top: 20px;
         }
         &__arrow{
             max-width: 35px;
             max-height: 43px;
-            bottom: 39px;
-            right: 29%;
+            bottom: 75px;
+            right: 6%;
             svg{
                 max-width: 35px;
                 max-height: 43px;
@@ -283,7 +284,7 @@
             margin-bottom: 40px;
         }
         &__img{
-            max-width: 388px;
+            max-width: 320px;
             max-height: 523px;
         }
         &__wrapper{
@@ -316,8 +317,8 @@
         &__arrow{
             max-width: 35px;
             max-height: 43px;
-            bottom: 15%;
-            left:53%;
+            bottom: 20%;
+            left: 46%;
             svg{
                 max-width: 35px;
                 max-height: 43px;
